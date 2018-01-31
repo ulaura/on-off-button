@@ -21,31 +21,39 @@ class Button extends Component {
 
   render() {
 
-    // inline styling
+    // inline styling for Button: ON
     const onButton = {
       backgroundColor: "yellow"
     }
-    // inline styling 
+
+    // inline styling for Button: OFF
     const offButton = {
-      backgroundColor: "#0E143A"
+      theDiv: {
+        backgroundColor: "#0E143A"
+      },
+      
+      theButton: {
+        backgroundColor: "green"
+      }
     }
 
     let buttonPage = null;
-    
+
     if (this.state.state) {
       buttonPage = (
         <div className="majorDiv" id="on" style={onButton}>
           <h1>Click the Button</h1>
-          <button type="button" onClick={this.handleButtonClick}>This button is true.</button>
+          <button type="button" onClick={this.handleButtonClick}>Button: ON</button>
         </div>
       );
       console.log(`Button state: ${this.state.state}`);
     }
+
     else {
       buttonPage = (
-        <div className="majorDiv" id="off" style={offButton}>
+        <div className="majorDiv" id="off" style={offButton.theDiv}>
           <h1>Click the Button</h1>
-          <button type="button" onClick={this.handleButtonClick}>This button is false.</button>
+          <button type="button" style={offButton.theButton} onClick={this.handleButtonClick}>Button: OFF</button>
         </div>
       );
       console.log(`Button state: ${this.state.state}`);

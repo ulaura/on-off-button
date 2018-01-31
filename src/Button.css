@@ -6,3 +6,12 @@
   left: 0;
   top: 0;
 }
+
+h1 {
+  text-align: center;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+}
