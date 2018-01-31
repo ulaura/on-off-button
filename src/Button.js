@@ -23,17 +23,34 @@ class Button extends Component {
 
     // inline styling for Button: ON
     const onButton = {
-      backgroundColor: "yellow"
+      theHeader: {
+        color: "#ACA7C4",
+      }, 
+
+      theDiv: {
+        backgroundColor: "white"
+      },
+      
+      theButton: {
+        backgroundColor: "white",
+        borderColor: "#F2C9C9"
+      }
     }
 
     // inline styling for Button: OFF
     const offButton = {
+      theHeader: {
+        color: "#F2E98B"
+      },
+
       theDiv: {
         backgroundColor: "#0E143A"
       },
       
       theButton: {
-        backgroundColor: "green"
+        backgroundColor: "white",
+        borderColor: "silver"
+        
       }
     }
 
@@ -41,9 +58,9 @@ class Button extends Component {
 
     if (this.state.state) {
       buttonPage = (
-        <div className="majorDiv" id="on" style={onButton}>
-          <h1>Click the Button</h1>
-          <button type="button" onClick={this.handleButtonClick}>Button: ON</button>
+        <div className="majorDiv" id="on" style={onButton.theDiv}>
+          <h1 style={onButton.theHeader}>Click the Button</h1>
+          <button type="button" style={onButton.theButton} onClick={this.handleButtonClick}>Button: ON</button>
         </div>
       );
       console.log(`Button state: ${this.state.state}`);
@@ -52,7 +69,7 @@ class Button extends Component {
     else {
       buttonPage = (
         <div className="majorDiv" id="off" style={offButton.theDiv}>
-          <h1>Click the Button</h1>
+          <h1 style={offButton.theHeader}>Click the Button</h1>
           <button type="button" style={offButton.theButton} onClick={this.handleButtonClick}>Button: OFF</button>
         </div>
       );

@@ -8,10 +8,16 @@
 }
 
 h1 {
+  font-size: 100px;
   text-align: center;
 }
 
 button {
+  outline: none; /* Gets rid of that default blue highlight border on buttons */
   display: block;
   margin: 0 auto;
+  height: 100px;
+  width: 250px;
+  border-width: 10px;
+  font-size: 40px;
 }
