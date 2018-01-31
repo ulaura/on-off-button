@@ -4,8 +4,6 @@ class Button extends Component {
   constructor(props) {
     super(props);
     this.handleButtonClick = this.handleButtonClick.bind(this);
-    this.handleButtonTrueClick = this.handleButtonTrueClick.bind(this);
-    this.handleButtonFalseClick = this.handleButtonFalseClick.bind(this);
     this.state = {state: true};
   }
 
@@ -19,32 +17,7 @@ class Button extends Component {
     console.log("handleButtonClick GO!");
   }
 
-  handleButtonTrueClick = () => {
-    console.log("handleButtonTrue");
-    this.setState({state: true});
-  }
-
-  handleButtonFalseClick = () => {
-    console.log("handleButtonFalse");
-    this.setState({state: false});
-  }
-
-  /*
-  buttonMessage = (message) => {
-    if (message) {
-      return <button type="button">This button is true.</button>;
-    }
-    else {
-      return <button type="button">This button is false.</button>;
-    }
-  }
-  */
-
   render() {
-    // let message = true; 
-
-    // const button1 = <button type="button">This button is true.</button>;
-    // const button2 = <button type="button">This button is false.</button>;
     let button = null;
 
     if (this.state.state) {
