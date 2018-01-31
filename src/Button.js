@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Button.css';
 
 class Button extends Component {
   constructor(props) {
@@ -17,24 +18,40 @@ class Button extends Component {
     console.log("handleButtonClick GO!");
   }
 
-  render() {
-    let button = null;
 
+  render() {
+
+    // inline styling
+    const onButton = {
+      backgroundColor: "yellow"
+    }
+    // inline styling 
+    const offButton = {
+      backgroundColor: "#0E143A"
+    }
+
+    let buttonPage = null;
+    
     if (this.state.state) {
-      button = <button type="button" onClick={this.handleButtonClick}>This button is true.</button>;
+      buttonPage = (
+        <div className="majorDiv" id="on" style={onButton}>
+          <h1>Click the Button</h1>
+          <button type="button" onClick={this.handleButtonClick}>This button is true.</button>
+        </div>
+      );
       console.log(`Button state: ${this.state.state}`);
     }
     else {
-      button = <button type="button" onClick={this.handleButtonClick}>This button is false.</button>;
+      buttonPage = (
+        <div className="majorDiv" id="off" style={offButton}>
+          <h1>Click the Button</h1>
+          <button type="button" onClick={this.handleButtonClick}>This button is false.</button>
+        </div>
+      );
       console.log(`Button state: ${this.state.state}`);
     }
 
-    return (
-      <div>
-        <h1>Click the Button</h1>
-        {button}
-      </div>
-    );
+    return buttonPage;
   }
 
 };
