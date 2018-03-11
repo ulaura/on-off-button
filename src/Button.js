@@ -10,10 +10,11 @@ class Button extends Component {
 
   handleButtonClick = () => {
     if (this.state.state) {
-      this.setState({state: false});
+      this.setState(() => ({state: false}));
     }
     else {
-      this.setState({state: true});
+      // this.setState({state: true});
+      this.setState(() => ({state: true}));
     }
     console.log("handleButtonClick GO!");
   }
@@ -26,11 +27,9 @@ class Button extends Component {
       theHeader: {
         color: "#ACA7C4",
       }, 
-
       theDiv: {
         backgroundColor: "white"
       },
-      
       theButton: {
         backgroundColor: "white",
         borderColor: "#F2C9C9"
@@ -42,11 +41,9 @@ class Button extends Component {
       theHeader: {
         color: "#F2E98B"
       },
-
       theDiv: {
         backgroundColor: "#0E143A"
       },
-      
       theButton: {
         backgroundColor: "white",
         borderColor: "silver"
