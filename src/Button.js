@@ -67,7 +67,13 @@ class Button extends Component {
     let buttonPage = (
       <div className="majorDiv" id="off" style={theStyle.theDiv}>
         <h1 style={theStyle.theHeader}>Click the Button</h1>
-        <button type="button" style={theStyle.theButton} onClick={this.handleButtonClick}>Button: {buttonName}</button>
+        <button 
+          type="button" 
+          style={theStyle.theButton} 
+          onClick={this.handleButtonClick}
+        >
+          Button: {buttonName}
+        </button>
       </div>
     );
     console.log(`Button state: ${this.state.state}`);
