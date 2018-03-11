@@ -2,7 +2,7 @@
 
 ## About
 This is a small React app that allows users to click a button on or off.<br />
-I built this specifically to practice using and changing the state, along with playing with changing the styling.
+I built this specifically to practice using and changing the state along with playing around the styling.
 
 ## Check It Out
 This app is hosted on GitHub Pages at [https://ulaura.github.io/on-off-button/](https://ulaura.github.io/on-off-button/).
