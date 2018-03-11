@@ -51,27 +51,23 @@ class Button extends Component {
       }
     }
 
-    let buttonPage = null;
+    let theStyle = null;
 
     if (this.state.state) {
-      buttonPage = (
-        <div className="majorDiv" id="on" style={onButton.theDiv}>
-          <h1 style={onButton.theHeader}>Click the Button</h1>
-          <button type="button" style={onButton.theButton} onClick={this.handleButtonClick}>Button: ON</button>
-        </div>
-      );
-      console.log(`Button state: ${this.state.state}`);
+      theStyle = onButton;
     }
 
     else {
-      buttonPage = (
-        <div className="majorDiv" id="off" style={offButton.theDiv}>
-          <h1 style={offButton.theHeader}>Click the Button</h1>
-          <button type="button" style={offButton.theButton} onClick={this.handleButtonClick}>Button: OFF</button>
-        </div>
-      );
-      console.log(`Button state: ${this.state.state}`);
+      theStyle = offButton;
     }
+
+    let buttonPage = (
+      <div className="majorDiv" id="off" style={theStyle.theDiv}>
+        <h1 style={theStyle.theHeader}>Click the Button</h1>
+        <button type="button" style={theStyle.theButton} onClick={this.handleButtonClick}>Button: OFF</button>
+      </div>
+    );
+    console.log(`Button state: ${this.state.state}`);
 
     return buttonPage;
   }
