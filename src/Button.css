@@ -17,9 +17,38 @@ button {
   outline: none; /* Gets rid of that default blue highlight border on buttons */
   display: block;
   margin: 0 auto;
-  height: 25%;
-  width: 60%;
+  height: 15%;
+  width: 25%;
   border-width: 10px;
   font-size: 300%;
   border-radius: 20px;
 }
+
+@media (max-width: 576px) {
+  button {
+    height: 15%;
+    width: 80%;
+  }
+}
+
+@media (min-width: 576.01px) and (max-width: 767.99px) {
+  button {
+    height: 25%;
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  button {
+    height: 20%;
+    width: 50%;
+  }
+} 
+
+@media (min-width: 992.01px) and (max-width: 1199.98px) {
+  button {
+    height: 15%;
+    width: 40%;
+  }
+} 
+
